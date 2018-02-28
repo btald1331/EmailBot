@@ -20,7 +20,7 @@ func main() {
 	interval := flag.Int("interval", 48, "Send email every X hours.")
 	stop := flag.Int("stop", 168, "Stop sending emails after X hours.")
 	rotate := flag.Int("rotate", 1000, "Rotate file after X megabytes.")
-	message := flag.String("message", "Hi. My name is Brice Aldrich. This is a bot, beep bop boop. This message was delivered by a program I wrote in Golang. I can write code. I can dev. I can hang. I know 5 spanish words. One being contratame. This will execute every 2 days until contact has been made.\n\n Source: https://github.com/btald1331/EmailBot.git", "Body of email.")
+	message := flag.String("message", "Hello,\n\nMy name is Brice Aldrich. This is a bot, beep bop boop. This message was delivered by a program I wrote in Golang. I can write code. I can dev. I can hang. I know 5 spanish words. One being contratame. This will execute every 2 days until contact has been made. In the mean time, please check out the link to my resume.\n\nSource: https://github.com/btald1331/EmailBot.git\nResume: https://drive.google.com/file/d/112VKL35gvsuyPxtuGcfDV7p6Lvap9Ad0/view?usp=sharing\n\nBest Regards,\nBrice Aldrich", "Body of email.")
 	flag.Parse()
 
 	log.SetOutput(&lumberjack.Logger{
